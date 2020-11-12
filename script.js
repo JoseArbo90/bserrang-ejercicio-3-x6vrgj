@@ -11,7 +11,7 @@ function getUsers() {
     .then(resp => resp.json())
     .then(data => filterUsers(data));
 }
-//arrayFiltro
+//arrayFiltro para los que tengan mas de 500.
 function filterUsers(users) {
   const filtrandoUsuarios = users.filter(user => user.money > 500);
   filtrandoUsuarios.forEach(filtrarUsuario => console.log(filtrarUsuario.name));
